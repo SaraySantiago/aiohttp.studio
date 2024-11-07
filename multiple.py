@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import aiohttp
 import asyncio
@@ -15,6 +15,7 @@ urls = ['http://webcode.me', 'https://httpbin.org/get',
 
 
 async def launch():
+    """Lanzadera lanzable asincrona que pide como un pobre"""
     
     resps = await asyncio.gather(*map(get_async, urls))
     data = [resp.status for resp in resps]
