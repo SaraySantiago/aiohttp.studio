@@ -17,7 +17,7 @@ urls = ['http://webcode.me', 'https://httpbin.org/get',
 async def launch():
     """Lanzadera lanzable asincrona que pide como un pobre"""
     
-    resps = await asyncio.gather(*map(get_async, urls))
+    resps = await asyncio.gather(*map(get_async, urls)) # -> TODO: entender porque esta esa *
     data = [resp.status for resp in resps]
 
     for status_code in data:
