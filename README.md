@@ -1,4 +1,5 @@
 # aiohttp.studio
 
 vemos los codigos de (https://zetcode.com/python/aiohttp/)
-- [] simple_cliente.py
+- [x] simple_cliente.py
+-[] multiple.py
