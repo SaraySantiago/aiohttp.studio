@@ -18,9 +18,9 @@ async def launch():
     """Lanzadera lanzable asincrona que pide como un pobre"""
     
     resps = await asyncio.gather(*map(get_async, urls)) # -> TODO: entender porque esta esa *
-    data = [resp.status for resp in resps]
+    stat = [resp.status for resp in resps]
 
-    for status_code in data:
+    for status_code in stat:
         print(status_code)
 
 asyncio.run(launch())
